@@ -1,5 +1,5 @@
 import React from "react";
-import { Center, SimpleGrid } from "@chakra-ui/react";
+import { Center, SimpleGrid, Text } from "@chakra-ui/react";
 import back from "./../assets/back.png";
 import { Button } from "@chakra-ui/button";
 import { useNavigate } from "react-router";
@@ -31,7 +31,7 @@ const Home = () => {
             border="3px green solid"
             onClick={eduNavigation}
           >
-            Learn More
+            <Text fontSize="1.5vmax">Learn More</Text>
           </Button>
         </div>
         <div className="right-img-div">
