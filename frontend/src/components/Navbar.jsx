@@ -24,23 +24,26 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const { login, setLogin } = useContext(AppContext);
   const navigate = useNavigate();
-  const logout = ()=>{
-    deleteCookie("username")
-    deleteCookie("auth-token")
-    setLogin(loginCheck())
-    window.reload()
-  }
+  const logout = () => {
+    deleteCookie("username");
+    deleteCookie("auth-token");
+    setLogin(loginCheck());
+    window.reload();
+  };
   const loginBtn = () => {
     if (login) {
       return (
-          <MenuItem onClick={logout} icon={<TbLogin2 />}>Logout</MenuItem>
+        <MenuItem onClick={logout} icon={<TbLogin2 />}>
+          Logout
+        </MenuItem>
       );
-    }else{
-      return(
+    } else {
+      return (
         <Link to="/signup">
           <MenuItem icon={<TbLogin2 />}>Login / Signup</MenuItem>
         </Link>
-      )
+      );
+
     }
   };
 
@@ -48,12 +51,14 @@ export default function Navbar() {
     if (login) {
       return (
         <MenuButton
-        onClick={logout}
+          onClick={logout}
           as={Button}
           leftIcon={<TbLogin2 />}
           sx={{
-            backgroundColor: "green",
+            backgroundColor: "#00a200",
             color: "white",
+            fontSize: "1.2vmax",
+
             ":hover": {
               backgroundColor: "green",
             },
@@ -65,27 +70,28 @@ export default function Navbar() {
           Logout
         </MenuButton>
       );
-    }else{
-      return(
+    } else {
+      return (
         <Link to="/signup">
-                    <MenuButton
-                      as={Button}
-                      leftIcon={<TbLogin2 />}
-                      sx={{
-                        backgroundColor: "green",
-                        color: "white",
-                        ":hover": {
-                          backgroundColor: "green",
-                        },
-                        ":active": {
-                          backgroundColor: "green",
-                        },
-                      }}
-                    >
-                      Login / Signup
-                    </MenuButton>
-                  </Link>
-      )
+          <MenuButton
+            as={Button}
+            leftIcon={<TbLogin2 />}
+            sx={{
+              backgroundColor: "#00a200",
+              color: "white",
+              fontSize: "1.2vmax",
+              ":hover": {
+                backgroundColor: "green",
+              },
+              ":active": {
+                backgroundColor: "green",
+              },
+            }}
+          >
+            Login / Signup
+          </MenuButton>
+        </Link>
+      );
     }
   };
 
@@ -107,7 +113,8 @@ export default function Navbar() {
         <div className="nav-parent-2 flex">
           <div className="nav-logo">
             <Link to="/">
-            <div className="title-nav">WasteX</div>
+              <div className="title-nav">WasteX</div>
+
             </Link>
           </div>
           <div className="nav-options flex">
@@ -120,7 +127,10 @@ export default function Navbar() {
                   variant="outline"
                   _hover={{ bg: "darkgreen" }}
                   _active={{ bg: "green" }}
-                  sx={{ borderColor: "transparent" }} // Set border color to transparent
+                  sx={{
+                    borderColor: "transparent",
+                  }} // Set border color to transparent
+
                 />
                 <MenuList>
                   <Link to="/complaint">
@@ -140,9 +150,8 @@ export default function Navbar() {
                   </Link>
 
                   <Link to="/faq">
-                    <MenuItem icon={<FaClipboardQuestion />}>
-                      FAQ
-                    </MenuItem>
+                    <MenuItem icon={<FaClipboardQuestion />}>FAQ</MenuItem>
+
                   </Link>
 
                   <Link to="/about">
@@ -158,8 +167,10 @@ export default function Navbar() {
                     as={Button}
                     rightIcon={<ChevronDownIcon />}
                     sx={{
-                      backgroundColor: "green",
+                      backgroundColor: "#00a200",
                       color: "white",
+                      fontSize: "1.2vmax",
+
                       ":hover": {
                         backgroundColor: "darkgreen",
                       },
@@ -170,7 +181,8 @@ export default function Navbar() {
                   >
                     Services
                   </MenuButton>
-                  
+
+
                   <MenuList>
                     <Link to="/complaint">
                       <MenuItem minH="40px">
@@ -202,7 +214,8 @@ export default function Navbar() {
                         &nbsp;
                         <span>Existing Complaints</span>
                       </MenuItem>
-                      </Link>
+                    </Link>
+
                   </MenuList>
                 </Menu>
 
@@ -212,8 +225,10 @@ export default function Navbar() {
                       as={Button}
                       leftIcon={<RiTeamFill />}
                       sx={{
-                        backgroundColor: "green",
+                        backgroundColor: "#00a200",
                         color: "white",
+                        fontSize: "1.2vmax",
+
                         ":hover": {
                           backgroundColor: "darkgreen",
                         },
@@ -233,8 +248,10 @@ export default function Navbar() {
                       as={Button}
                       leftIcon={<FaClipboardQuestion />}
                       sx={{
-                        backgroundColor: "green",
+                        backgroundColor: "#00a200",
                         color: "white",
+                        fontSize: "1.2vmax",
+
                         ":hover": {
                           backgroundColor: "darkgreen",
                         },
@@ -248,9 +265,8 @@ export default function Navbar() {
                   </Link>
                 </Menu>
 
-                <Menu>
-                  {loginBtn2()}
-                </Menu>
+                <Menu>{loginBtn2()}</Menu>
+
               </>
             )}
           </div>

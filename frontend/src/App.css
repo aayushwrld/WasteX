@@ -28,7 +28,6 @@
 }
 
 
-
 .err {
   color: red;
   font-size: 1.5vmin;
@@ -62,7 +61,7 @@ nav {
   justify-content: center;
   border-bottom: 1px solid;
   box-shadow: 0px 2px 5px black;
-  width: 65vw;
+  width: 90%;
   font-weight: 600;
   background-color: rgb(0, 162, 0);
   border-radius: 20px;
@@ -193,11 +192,12 @@ a6[data-active] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 47vw;
-  padding: 2vmin;
-  border-radius: 10px;
-  border: 3px green solid;
-  background-color: #fefed4;
+  /* width: 47vw; */
+  /* height: 50vh; */
+  /* padding: 2vmin; */
+  /* border-radius: 10px; */
+  /* border: 3px green solid; */
+  /* background-color:#fefed4; */
   gap: 1vmin;
 }
 
@@ -271,7 +271,6 @@ a6[data-active] {
 }
 
 
-
 /* Home */
 
 .home-parent {
@@ -280,6 +279,14 @@ a6[data-active] {
   display: flex;
   color: green;
   justify-content: space-between;
+}
+
+.home-section2 {
+  padding: 5vmax 4.5vmax;
+  text-align: center;
+  font-size: 2.5vmax;
+  color: green;
+  font-weight: 900;
 }
 
 .right-img {
@@ -395,6 +402,35 @@ a {
   align-items: center;
   gap: 9vmax;
 }
+/* Donation page */
+.donation-div {
+  padding: 5vmax;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.donationImg {
+  width: 35vmax;
+}
+.donation-ref {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 3vmax;
+  align-items: center;
+}
+.donation-form {
+  width: 100%;
+}
+.donation-text {
+  font-size: 3vmax;
+  max-width: 45vmax;
+  text-align: center;
+  font-weight: 900;
+  color: green;
+}
 
 /* Media query */
 @media (max-width: 600px) {
@@ -413,15 +449,20 @@ a {
   }
 
   .content {
-  flex-direction: column;
-  text-align: center;
-  gap: 1vh;
+    flex-direction: column;
+    text-align: center;
+    gap: 1vh;
+
   }
   .category-btn {
     font-size: 50vmax;
   }
   .form {
-    width: 70vw;
+    /* width: 70vw; */
+  }
+  .donation-ref {
+    gap: 9vmax;
+
   }
   .form1 {
     width: 70vw;
@@ -436,4 +477,3 @@ a {
   #img-logo {
     width: 8vmax;
   }
-}
