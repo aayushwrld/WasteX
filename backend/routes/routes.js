@@ -137,7 +137,7 @@ userControl.post(
       product: {
         name: "WasteX",
         logo: "https://freepngimg.com/save/27098-welcome-clipart/1584x698",
-        link: "https://wastex.vercel.app/",
+        link: "https://wastex-x.vercel.app/",
       },
     });
 
