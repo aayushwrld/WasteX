@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
+const mailgen = require("mailgen");
 
 // requiring routers
 const userControl = express.Router();
@@ -99,10 +101,67 @@ userControl.post("/signup", validateUser, wrapAsync(async (req, res) => {
     let insertData = new User({ username, name, password, address, contact });
     insertData.society = checkSociety[0];
     await insertData.save();
-    let token = jwt.sign({ username: req.body.username }, process.env.JWT_PASS);
-    console.log("Added!");
-    res.send(token);
+
+    let config = {
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASS
+        }
+    }
+
+    let transporter = nodemailer.createTransport(config);
+
+    let MailGenerator = new mailgen({
+        theme: "salted",
+        product: {
+            name: "WasteX",
+            logo: "https://freepngimg.com/save/27098-welcome-clipart/1584x698",
+            link: "https://wastex.vercel.app/"
+        }
+    })
+
+    let response = {
+        body: {
+            title: "Welcome to WasteX",
+            name: "User",
+            intro: "Your account has been successfully created on WasteX! :)",
+            signature: 'Sincerely, Team WasteX',
+            action: [
+                {
+                    instructions: 'Click here to go to WasteX',
+                    button: {
+                        color: '#22BC66',
+                        text: 'WasteX',
+                        link: 'https://wastex.vercel.app/'
+                    }
+                }
+            ]
+        }
+    }
+
+    let mail = MailGenerator.generate(response);
+
+    let message = {
+        from: process.env.EMAIL,
+        to: contact.email,
+        subject: "Welcome to WasteX!",
+        html: mail
+    }
+
+    transporter.sendMail(message)
+        .then(() => {
+            res.status(201).json({
+                msg: "Sent Mail!",
+                token: jwt.sign({ username: req.body.username }, process.env.JWT_PASS)
+            });
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).json({ error: "Failed to send email" });
+        });
 }));
+
 
 // route for logging in
 userControl.post("/login", wrapAsync(async (req, res) => {
@@ -166,7 +225,7 @@ societyControl.get("/:id", async (req, res) => {
     if (result == null) {
         res.status(404).json("Society not Found!")
     }
-    res.send(result)
+    res.send(result);
 });
 
 // route for editing society
