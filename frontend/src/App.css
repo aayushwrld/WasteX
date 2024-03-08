@@ -27,6 +27,7 @@
   /* color: rgb(198, 232, 255); */
 }
 
+
 .err {
   color: red;
   font-size: 1.5vmin;
@@ -269,6 +270,7 @@ a6[data-active] {
   cursor: pointer;
 }
 
+
 /* Home */
 
 .home-parent {
@@ -278,17 +280,7 @@ a6[data-active] {
   color: green;
   justify-content: space-between;
 }
-.motive-div {
-  display: flex;
-  justify-content: space-between;
-  padding: 4vmax;
-}
-.motive-card {
-  height: 30vmax;
-  width: 25vmax;
-  border: green 3px solid;
-  border-radius: 20px;
-}
+
 .home-section2 {
   padding: 5vmax 4.5vmax;
   text-align: center;
@@ -460,6 +452,7 @@ a {
     flex-direction: column;
     text-align: center;
     gap: 1vh;
+
   }
   .category-btn {
     font-size: 50vmax;
@@ -469,6 +462,7 @@ a {
   }
   .donation-ref {
     gap: 9vmax;
+
   }
   .form1 {
     width: 70vw;
@@ -483,4 +477,3 @@ a {
   #img-logo {
     width: 8vmax;
   }
-}

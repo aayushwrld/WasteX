@@ -43,6 +43,7 @@ export default function Navbar() {
           <MenuItem icon={<TbLogin2 />}>Login / Signup</MenuItem>
         </Link>
       );
+
     }
   };
 
@@ -57,6 +58,7 @@ export default function Navbar() {
             backgroundColor: "#00a200",
             color: "white",
             fontSize: "1.2vmax",
+
             ":hover": {
               backgroundColor: "green",
             },
@@ -93,6 +95,7 @@ export default function Navbar() {
     }
   };
 
+
   useEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth < 800);
@@ -111,6 +114,7 @@ export default function Navbar() {
           <div className="nav-logo">
             <Link to="/">
               <div className="title-nav">WasteX</div>
+
             </Link>
           </div>
           <div className="nav-options flex">
@@ -126,6 +130,7 @@ export default function Navbar() {
                   sx={{
                     borderColor: "transparent",
                   }} // Set border color to transparent
+
                 />
                 <MenuList>
                   <Link to="/complaint">
@@ -146,6 +151,7 @@ export default function Navbar() {
 
                   <Link to="/faq">
                     <MenuItem icon={<FaClipboardQuestion />}>FAQ</MenuItem>
+
                   </Link>
 
                   <Link to="/about">
@@ -164,6 +170,7 @@ export default function Navbar() {
                       backgroundColor: "#00a200",
                       color: "white",
                       fontSize: "1.2vmax",
+
                       ":hover": {
                         backgroundColor: "darkgreen",
                       },
@@ -174,6 +181,7 @@ export default function Navbar() {
                   >
                     Services
                   </MenuButton>
+
 
                   <MenuList>
                     <Link to="/complaint">
@@ -207,6 +215,7 @@ export default function Navbar() {
                         <span>Existing Complaints</span>
                       </MenuItem>
                     </Link>
+
                   </MenuList>
                 </Menu>
 
@@ -219,6 +228,7 @@ export default function Navbar() {
                         backgroundColor: "#00a200",
                         color: "white",
                         fontSize: "1.2vmax",
+
                         ":hover": {
                           backgroundColor: "darkgreen",
                         },
@@ -241,6 +251,7 @@ export default function Navbar() {
                         backgroundColor: "#00a200",
                         color: "white",
                         fontSize: "1.2vmax",
+
                         ":hover": {
                           backgroundColor: "darkgreen",
                         },
@@ -255,6 +266,7 @@ export default function Navbar() {
                 </Menu>
 
                 <Menu>{loginBtn2()}</Menu>
+
               </>
             )}
           </div>

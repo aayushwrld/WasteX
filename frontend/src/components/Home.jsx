@@ -5,6 +5,7 @@ import { Button } from "@chakra-ui/button";
 import { useNavigate } from "react-router";
 import bgImg from "./../assets/bg-img.png";
 
+
 const Home = () => {
   const navigate = useNavigate();
   function regiNavigate() {
@@ -38,6 +39,7 @@ const Home = () => {
         </div>
       </div>
     </>
+
   );
 };
 
