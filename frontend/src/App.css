@@ -332,11 +332,12 @@ a6[data-active] {
 }
 
 .moto-div {
-  padding: 1vmax;
+  /* padding: 1vmax; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.5vmax;
-  padding-top: 5vmax;
+  /* padding-top: 5vmax; */
 }
 
 .moto {
