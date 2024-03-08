@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // Import routes
-const { servicesControl, userControl, societyControl, complaintControl, paymentControl } = require('./routes/routes');
+const { servicesControl, userControl, societyControl, complaintControl, paymentControl,citiesControl } = require('./routes/routes');
 
 // Configure body parser for larger requests
 const bodyParser = require('body-parser');
@@ -40,6 +40,7 @@ app.use('/user', userControl);
 app.use('/society', societyControl);
 app.use('/complaint', complaintControl);
 app.use('/pay', paymentControl);
+app.use('/cities', citiesControl);
 
 // Define a basic route
 app.get('/', (req, res) => {
