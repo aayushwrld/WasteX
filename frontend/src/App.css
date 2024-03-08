@@ -230,7 +230,7 @@ a6[data-active] {
   font-weight: 500;
 }
 
-.content {
+.content, .content-2 {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -281,7 +281,8 @@ a6[data-active] {
 #edu-img {
   width: 35vmin;
   height: 35vmin;
-  border-radius: 20px;
+  border-radius: 50%;
+  border: 6px solid black;
 }
 
 .nav-buttons {
@@ -479,12 +480,12 @@ a {
     text-align: center;
   }
 
-  .content {
+  .content, .content-2 {
     flex-direction: column;
     text-align: center;
     gap: 1vh;
-
   }
+
   .category-btn {
     font-size: 50vmax;
   }
@@ -515,5 +516,13 @@ a {
 
   #img-logo {
     width: 8vmax;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .edu-text-1 {
+    font-weight: 900;
   }
 }

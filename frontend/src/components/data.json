@@ -1,42 +1,52 @@
 [
     {
-        "text": "Plastic pollution is a pressing environmental issue. Did you know that plastic waste can take up to 1000 years to decompose? Improper disposal of plastic waste leads to pollution of oceans, rivers, and land. Let's raise awareness and take action to reduce single-use plastics and promote recycling efforts.",
+        "title": "Plastic Pollution",
+        "text": "Plastic pollution is a pressing issue. Did you know plastic waste can take up to 1000 years to decompose? Let's reduce single-use plastics and promote recycling efforts.",
         "gif": "https://media2.giphy.com/media/gdq63C9iGGmbjfHFIg/giphy.webp?cid=790b76115xc4vqbz96lnrq8u137pfs67huy5yvb152csbaws&ep=v1_gifs_search&rid=giphy.webp&ct=g"
     },
     {
-        "text": "Food waste is a significant problem worldwide. Approximately 1.3 billion tons of food is wasted annually, contributing to environmental degradation and hunger. By practicing mindful consumption, proper storage, and composting, we can minimize food waste and its negative impact on both the environment and society.",
+        "title": "Food Waste",
+        "text": "Food waste is a significant problem worldwide. Let's minimize food waste and its negative impact.",
         "gif": "https://media1.tenor.com/m/K71-zmeJ0aoAAAAC/world-food-day-participated-in-world-food-day.gif"
     },
     {
-        "text": "Electronic waste (e-waste) poses a growing threat to our planet. Discarded electronics contain hazardous materials that can pollute soil and water if not properly recycled. Responsible e-waste management involves recycling old electronics to recover valuable materials and minimize environmental harm.",
+        "title": "Electronic Waste (E-Waste)",
+        "text": "Electronic waste poses a growing threat. Let's recycle old electronics and minimize environmental harm.",
         "gif": "https://stemettes.org/zine/wp-content/uploads/sites/3/2021/08/source-1.gif"
     },
     {
-        "text": "Composting is an effective method for managing organic waste. By composting food scraps, yard trimmings, and other biodegradable materials, we can divert waste from landfills and reduce methane emissions. Additionally, compost enriches soil health, promotes plant growth, and mitigates erosion.",
+        "title": "Composting",
+        "text": "Composting is an effective method for managing organic waste. Let's divert waste from landfills and reduce emissions.",
         "gif": "https://i.gifer.com/7MEU.gif"
     },
     {
-        "text": "Marine ecosystems are severely impacted by plastic pollution. Every year, millions of marine animals suffer from entanglement or ingestion of plastic debris. To combat this issue, we must reduce plastic consumption, properly dispose of plastic waste, and support initiatives to clean up our oceans and coastlines.",
+        "title": "Marine Pollution",
+        "text": "Marine ecosystems are severely impacted by plastic pollution. Let's combat this issue and support ocean cleanup.",
         "gif": "https://media3.giphy.com/media/X8XooNcobwouN8RMSQ/giphy.gif"
     },
     {
-        "text": "Textile waste is a significant contributor to environmental pollution. Fast fashion and excessive clothing consumption lead to massive amounts of textile waste in landfills. By supporting sustainable fashion practices, such as buying quality clothing and recycling textiles, we can reduce the environmental impact of the fashion industry.",
+        "title": "Textile Waste",
+        "text": "Textile waste contributes to environmental pollution. Let's support sustainable fashion practices.",
         "gif": "https://cdn.shopify.com/s/files/1/1066/1832/files/landfill-1.gif?v=1630391616"
     },
     {
-        "text": "Paper waste accounts for a large portion of municipal solid waste. Recycling paper products helps save trees, conserve energy, and reduce greenhouse gas emissions. Let's promote paper recycling and reduce our reliance on virgin paper materials to preserve our forests and combat climate change.",
+        "title": "Paper Recycling",
+        "text": "Recycling paper products helps save trees and reduce emissions. Let's promote paper recycling.",
         "gif": "https://media2.giphy.com/media/JtGrrYGJM7gplxeEVd/giphy.gif?cid=6c09b952zfev0o2w89qxd4ux77a7ch6a7aqc2du8fo7bzaw6&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
     },
     {
-        "text": "Hazardous waste poses serious risks to human health and the environment. Proper handling and disposal of hazardous materials, such as batteries, chemicals, and pharmaceuticals, are essential to prevent contamination of soil, water, and air. Let's educate ourselves and take responsible actions to minimize hazardous waste generation and ensure safe disposal practices.",
+        "title": "Hazardous Waste",
+        "text": "Hazardous waste poses serious risks. Let's minimize hazardous waste generation and ensure safe disposal.",
         "gif": "https://media.tenor.com/goL67UzQb24AAAAM/futurama-toxic-waste.gif"
     },
     {
-        "text": "Landfills are major sources of environmental pollution. Improperly managed landfills release methane, a potent greenhouse gas, into the atmosphere and contaminate soil and groundwater. Implementing strategies such as waste diversion, recycling, and landfill gas capture can mitigate the environmental impact of landfills.",
+        "title": "Landfill Management",
+        "text": "Landfills release methane and contaminate soil. Let's implement strategies for environmental protection.",
         "gif": "https://i.pinimg.com/originals/39/a0/51/39a0515d87ac9194c801e6104e9552f7.gif"
     },
     {
-        "text": "Biodegradable plastics offer a potential solution to plastic pollution. These plastics break down into natural components when exposed to environmental conditions, reducing their impact on ecosystems. However, proper disposal infrastructure and consumer education are essential to ensure that biodegradable plastics are effectively managed and do not contribute to pollution.",
+        "title": "Biodegradable Plastics",
+        "text": "Biodegradable plastics offer a potential solution to pollution. Let's ensure effective management.",
         "gif": "https://i.makeagif.com/media/10-26-2016/VPR61-.gif"
     }
 ]

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
-import { Button } from "@chakra-ui/react";
-import data from "./data.json";
 import { useNavigate } from "react-router-dom";
-import Book from "../assets/BookClipart.png"
-import Ques from "../assets/Question.png"
+import data from "./data.json";
+import Book from "../assets/BookClipart.png";
+import Ques from "../assets/Question.png";
 
 export default function Educational() {
   const [count, setCount] = useState(0);
@@ -15,7 +14,7 @@ export default function Educational() {
     if (count < data.length - 1) {
       setCount(count + 1);
     } else {
-      setCount(0);
+      setCount(0); // Reset count to loop back to the first entity
     }
     setClicked(false); // Reset clicked state
   }
@@ -24,7 +23,7 @@ export default function Educational() {
     if (count > 0) {
       setCount(count - 1);
     } else {
-      setCount(data.length - 1);
+      setCount(data.length - 1); // Set count to the last entity when reaching the beginning
     }
     setClicked(true); // Set clicked state to true
   }
@@ -35,52 +34,27 @@ export default function Educational() {
 
   return (
     <div className="edu-parent">
-
-
-{/* <div className="bg-elements" style={{top:"20vh", left:"10vw", bottom:"30vh"}}>
-        <img src={Book} alt="" id="back-img-1"/>
-      </div>
-
-      <div className="bg-elements" style={{top:"80vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Ques} alt="" id="back-img-2"/>
-      </div>
-
-
-      <div className="bg-elements" style={{top:"15vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Book} alt="" id="back-img-1"/>
-      </div>
-
-      <div className="bg-elements" style={{top:"15vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Ques} alt="" id="back-img-2"/>
-      </div>
-      <div className="bg-elements" style={{top:"15vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Book} alt="" id="back-img-1"/>
-      </div>
-      <div className="bg-elements" style={{top:"15vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Ques} alt="" id="back-img-2"/>
-      </div>
-      <div className="bg-elements" style={{top:"15vh", right:"30vw", left:"20vw", bottom:"30vh"}}>
-        <img src={Book} alt="" id="back-img-1"/>
-      </div>
- */}
-
-
-
-
       <div className="edu-div flex">
         <div className="content">
+          <div className="edu-text">
+            <div className="edu-text-1">{data[count].title}</div>
+            <div className="edu-text-2">{data[count].text}</div>
+          </div>
           <div className="edu-video">
-            <img src={data[count].gif} id="edu-img" />
+            <img src={data[count].gif} id="edu-img" alt="Educational content" />
+          </div>
+        </div><br />
+        <div className="content-2">
+          <div className="edu-video">
+            {/* Display the next entity in data.json */}
+            <img src={data[(count + 1) % data.length].gif} id="edu-img" alt="Educational content" />
           </div>
           <div className="edu-text">
-            <div className="edu-text-1">
-              Title
-            </div>
-            <div className="edu-text-2">
-            {data[count].text}
-            </div>
-            </div>
+            <div className="edu-text-1">{data[(count + 1) % data.length].title}</div>
+            <div className="edu-text-2">{data[(count + 1) % data.length].text}</div>
+          </div>
         </div>
+
         <div className="nav-buttons">
           <FaArrowCircleLeft
             size="2.8vmax"
@@ -95,7 +69,6 @@ export default function Educational() {
             id="arrow"
           />
         </div>
-
       </div>
     </div>
   );
