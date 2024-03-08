@@ -33,11 +33,13 @@ const userSchema = new mongoose.Schema({
     contact: {
         phone: {
             type: Number,
-            required: true
+            required: true,
+            unique: true
         },
         email: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         }
     }
 });
