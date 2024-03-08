@@ -1,5 +1,7 @@
 # Waste Management System
 
+# Frontend Deployed Link - [Frontend Link](https://wastex-x.vercel.app/)
+
 # Backend Deployed Link - [Backend Link](https://waste-x-gamma.vercel.app/)
 
 ### Problem No. - 144
