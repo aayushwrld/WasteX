@@ -457,9 +457,7 @@ a {
   .category-btn {
     font-size: 50vmax;
   }
-  .form {
-    /* width: 70vw; */
-  }
+  
   .donation-ref {
     gap: 9vmax;
 
@@ -477,3 +475,4 @@ a {
   #img-logo {
     width: 8vmax;
   }
+}
