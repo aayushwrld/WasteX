@@ -63,5 +63,22 @@ This project addresses the critical issue of improper waste disposal within resi
 
 <br>
 
+## Features Screenshots
+
+### RazorPay Integration
+![image](https://github.com/aayushharora/WasteX/assets/142983808/69201f24-eeca-444d-a338-fdaa04c061f9)
+
+### Comprehensive Signup process with Error Handling!
+
+![image](https://github.com/aayushharora/WasteX/assets/142983808/c0a80094-4660-452e-9e09-7b1d272d35bc)
+
+![image](https://github.com/aayushharora/WasteX/assets/142983808/1d40b0c3-84c4-4726-93fb-fe073392b9ff)
+
+### Interactive Complaint Form, with feature to upload to upload image (BLOB)
+
+![Uploading image.png…]()
+
+
+
 Project by - Rikhil, Aayush, Dwij, Pranshu
 
