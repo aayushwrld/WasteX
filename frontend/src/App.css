@@ -54,18 +54,6 @@
   border-radius: 2rem;
 }
 
-.form-parent {
-  flex: 1;
-  padding: 5vmin 10vmin;
-  display: flex;
-  /* gap: 5vmin; */
-  flex-direction: column;
-  align-items: space-around;
-  justify-content: center;
-  /* background-color: aliceblue; */
-  /* color: rgb(198, 232, 255); */
-}
-
 .form-img-parent {
   /* flex-wrap: wrap; */
   /* flex-direction: column; */
@@ -160,7 +148,7 @@ a6[data-active] {
   /* line-height: 3vmax; */
   display: flex;
   flex-direction: column;
-  padding-top: 5vw;
+  /* padding-top: 5vw; */
   gap: 3vmax;
 }
 
@@ -174,7 +162,7 @@ a6[data-active] {
   padding: 3vmax;
   display: flex;
   flex-direction: column;
-  gap: 1vmax;
+  gap: 4vmax;
 }
 
 .next-button {
@@ -221,13 +209,14 @@ a6[data-active] {
 
 .form-parent {
   flex: 1;
-  padding: 5vmin 10vmin;
+  /* padding: 5vmin 10vmin; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* background-color: aliceblue; */
   /* color: rgb(198, 232, 255); */
-  /* gap: 4vmax; */
+  gap: 2vmin;
 }
 
 #sign-in-img {
@@ -237,7 +226,7 @@ a6[data-active] {
 .buttons {
 
   display: flex;
-  /* gap: 1vmax; */
+  gap: 1vmax;
   /* justify-content: center; */
 }
 
@@ -245,7 +234,7 @@ a6[data-active] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 100%;
   justify-content: center;
   /* width: 47vw; */
   /* height: 50vh; */
@@ -279,7 +268,7 @@ a6[data-active] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   /* padding: 2vmin; */
   /* border-radius: 10px; */
   /* border: 3px green solid; */

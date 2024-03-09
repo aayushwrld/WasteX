@@ -107,7 +107,7 @@ export default function Signup() {
     switch (count) {
       case 1:
         return (
-          <div className="form-parent" style={{height:"100%"}}>
+          <div className="form-parent" style={{flex:"1"}}>
             <ToastContainer />
             {/* <br /> */}
             <div className="form-img-parent flex">
@@ -494,5 +494,5 @@ export default function Signup() {
         );
     }
   };
-  return <div style={{flex:1,display:"flex",justifyContent:"center",alignItems:"center"}}>{pageRender()}</div>;
+  return (<>{pageRender()}</>)
 }

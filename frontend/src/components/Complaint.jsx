@@ -230,9 +230,6 @@ export default function Complaint() {
                     >
                       Back
                     </Button>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
                     {submit1 ? (
                       <Button colorScheme="red" onClick={nextDetail}>
                         Next
