@@ -17,9 +17,41 @@
 }
 
 .about-parent {
-  margin: 4vw;
-  border-radius: 2vw;
+  margin: 2vw;
+  color: green;
+  font-size: 1.3vmax;
+}
+
+.about-text {
+  border-radius: 1vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+  font-weight: 600;
+}
+
+.about-text2 {
+  font-size: 2.5vmax;
+  font-weight: 800;
+}
+
+.about-part-1 {
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-part-2 {
+  color: white;
+  gap: 4rem;
+}
+
+.about-card-1, .about-card-2 {
+  padding: 2vmin;
   background-color: rgb(0, 162, 0);
+  font-size: 1.2vmax;
+  border-radius: 2rem;
 }
 
 .form-parent {
@@ -43,7 +75,7 @@
 .err {
   color: red;
   font-size: 1.5vmin;
-  margin-top: 0.5qvmin;
+  margin-top: 0.5vmin;
 }
 
 .flex {
@@ -627,4 +659,12 @@ a {
   .form {
     gap: 4vmin;
   }
+
+  .about-text {
+    width: 90%;
+    font-size: 2vmax;
+}
+.about-part-2 {
+  flex-direction: column;
+}
 }
