@@ -26,3 +26,10 @@ module.exports.complaintValidation = Joi.object({
     resolved: Joi.boolean(),
     image: Joi.string().required(),
 })
+
+module.exports.postValidation = Joi.object({
+    title: Joi.string().required(),
+    description:Joi.string().required(),
+    image:Joi.string().required()
+
+})

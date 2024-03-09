@@ -13,6 +13,8 @@ import PrivateAuthRoute from "./PrivateAuthRoute";
 import Complaints from "../Complaints";
 import Faq from "../Faq";
 import About from "../About";
+import PostListings from "../PostListings";
+import PostForm from "../PostForm";
 
 const AllRoutes = () => {
   return (
@@ -39,6 +41,10 @@ const AllRoutes = () => {
       <Route path="/faq" element={<Faq />} />
       <Route path="/about" element={<About />} />
       <Route path="/incentive/society/:id" element={<CardDetail />} />
+      <Route path="/posts" element={<PostListings />} />
+      <Route path="/newpost" element={<PostForm />} />
+
+
     </Routes>
   );
 };

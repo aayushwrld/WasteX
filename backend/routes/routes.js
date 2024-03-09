@@ -12,6 +12,7 @@ const complaintControl = express.Router();
 const paymentControl = express.Router();
 const servicesControl = express.Router();
 const citiesControl = express.Router();
+const postsControl = express.Router()
 
 // for parsing more entities so that image can be converted to Base64 format
 const bodyParser = require("body-parser");
@@ -43,6 +44,7 @@ const {
   userValidation,
   societyValidation,
   complaintValidation,
+  postValidation,
 } = require("../utils/validation");
 
 //using dotenv for env. variables
@@ -52,6 +54,7 @@ const mongoose = require("mongoose");
 const razorpay = require("razorpay");
 const crypto = require("crypto");
 const Cities = require("../models/cities.js");
+const Post = require("../models/posts.js");
 
 // making incoming data as in json format
 app.use(express.json());
@@ -61,6 +64,7 @@ societyControl.use(express.json());
 complaintControl.use(express.json());
 paymentControl.use(express.json());
 citiesControl.use(express.json())
+postsControl.use(express.json())
 
 // functions for verifications
 const validateUser = (req, res, next) => {
@@ -89,6 +93,15 @@ const validateComplaint = (req, res, next) => {
     next();
   }
 };
+
+ const validatePost = (req,res,next)=>{
+  let {error} = postValidation.validate(req.body)
+  if (error) {
+    throw new ExpressError(400, `joi, ${error}`);
+  } else {
+    next();
+  }
+}
 
 const jwtVerify = (req, res, next) => {
   try {
@@ -352,6 +365,25 @@ citiesControl.use((err, req, res, next) => {
   res.status(status).send(err.message);
 });
 
+postsControl.get("/",wrapAsync(async(req,res)=>{
+  let result = await Post.find()
+  if(result.length == 0){
+    throw new ExpressError(404,"no posts found")
+  }
+  res.send(result)
+}))
+
+postsControl.post("/",validatePost,wrapAsync(async(req,res)=>{
+  let newPost = new Post(req.body)
+  await newPost.save()
+  res.send("added")
+}))
+
+postsControl.use((err, req, res, next) => {
+  let { status = 500, message = "Some error occured..!" } = err;
+  res.status(status).send(err.message);
+});
+
 module.exports = {
   userControl,
   societyControl,
@@ -359,4 +391,5 @@ module.exports = {
   paymentControl,
   complaintControl,
   citiesControl,
+  postsControl
 };
