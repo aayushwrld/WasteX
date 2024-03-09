@@ -590,6 +590,13 @@ a {
   }
 }
 
+.tour-btn{
+  position: fixed;
+  bottom: 1.5vh;
+  right:1.5vw;
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 800px) {
   nav {
     width: 90vw;
