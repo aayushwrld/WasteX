@@ -63,6 +63,7 @@ export default function SocietyRegister() {
           <Input
             type="text"
             borderColor="#D0D5FA"
+            backgroundColor="ivory"
             {...register("name", {
               required: "name is required",
             })}
@@ -76,6 +77,7 @@ export default function SocietyRegister() {
           <Input
             type="text"
             borderColor="#D0D5FA"
+            backgroundColor="ivory"
             {...register("location", {
               required: "location is required",
             })}
@@ -89,6 +91,7 @@ export default function SocietyRegister() {
           <Input
             type="number"
             borderColor="#D0D5FA"
+            backgroundColor="ivory"
             {...register("residents", {
               required: "no of residents is required",
             })}

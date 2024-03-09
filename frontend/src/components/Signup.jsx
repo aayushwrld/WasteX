@@ -17,8 +17,7 @@ import { useContext, useEffect, useState } from "react";
 import { setCookie } from "../utils/cookie";
 import { AppContext } from "./Context";
 import { loginCheck } from "../utils/loginCheck";
-import SignIn from "../assets/SignIn.png"
-
+import SignIn from "../assets/SignIn.png";
 
 export default function Signup() {
   const [submit1, setSubmit1] = useState(false);
@@ -107,94 +106,101 @@ export default function Signup() {
     switch (count) {
       case 1:
         return (
-          <div className="form-parent" style={{height:"100%"}}>
+          <div className="form-parent" style={{ height: "100%" }}>
             <ToastContainer />
             {/* <br /> */}
             <div className="form-img-parent flex">
               <div className="form-1">
-              <form
-                className="form1"
-                onSubmit={handleSubmit(FormSubmitHandler1)}
-              >
-                <Text as="b" fontSize="2.3vmax">
-                  Sign Up
-                </Text>
-                <Text as="i" fontSize="1vmax">
-                  Enter the following details!
-                </Text>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Username
-                  </FormLabel>
-                  <Input
-                    type="text"
-                    border="2px solid green"
-                    {...register("username", {
-                      required: "Username is required",
-                    })}
-                    value={signupData.username || ""} // Set value from state
-                    onChange={(e) =>
-                      setSignupData({ ...signupData, username: e.target.value })
-                    } // Update state on change
-                  />
-                  <p className="err">{errors.username?.message}</p>
-                </FormControl>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Name
-                  </FormLabel>
-                  <Input
-                    type="text"
-                    border="2px solid green"
-                    {...register("name", {
-                      required: "name is required",
-                    })}
-                  />
-                  <p className="err">{errors.name?.message}</p>
-                </FormControl>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Password
-                  </FormLabel>
-                  <Input
-                    type="password"
-                    border="2px solid green"
-                    {...register("password", {
-                      required: "Password Required",
-                      minLength: {
-                        value: 8,
-                        message: "Minimum 8 characters required",
-                      },
-                      pattern: {
-                        value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
-                        message:
-                          "Password Not Valid (Use Special Characters & Numbers)",
-                      },
-                    })}
-                  />
-                  <p className="err">{errors.password?.message}</p>
-                </FormControl>
+                <form
+                  className="form1"
+                  onSubmit={handleSubmit(FormSubmitHandler1)}
+                >
+                  <Text as="b" fontSize="2.3vmax">
+                    Sign Up
+                  </Text>
+                  <Text as="i" fontSize="1vmax">
+                    Enter the following details!
+                  </Text>
+                  <FormControl>
+                    <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                      Username
+                    </FormLabel>
+                    <Input
+                      type="text"
+                      border="2px solid green"
+                      backgroundColor="ivory"
+                      {...register("username", {
+                        required: "Username is required",
+                      })}
+                      value={signupData.username || ""} // Set value from state
+                      onChange={(e) =>
+                        setSignupData({
+                          ...signupData,
+                          username: e.target.value,
+                        })
+                      } // Update state on change
+                    />
+                    <p className="err">{errors.username?.message}</p>
+                  </FormControl>
+                  <FormControl>
+                    <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                      Name
+                    </FormLabel>
+                    <Input
+                      type="text"
+                      border="2px solid green"
+                      backgroundColor="ivory"
+                      {...register("name", {
+                        required: "name is required",
+                      })}
+                    />
+                    <p className="err">{errors.name?.message}</p>
+                  </FormControl>
+                  <FormControl>
+                    <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                      Password
+                    </FormLabel>
+                    <Input
+                      type="password"
+                      border="2px solid green"
+                      backgroundColor="ivory"
+                      {...register("password", {
+                        required: "Password Required",
+                        minLength: {
+                          value: 8,
+                          message: "Minimum 8 characters required",
+                        },
+                        pattern: {
+                          value:
+                            /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
+                          message:
+                            "Password Not Valid (Use Special Characters & Numbers)",
+                        },
+                      })}
+                    />
+                    <p className="err">{errors.password?.message}</p>
+                  </FormControl>
 
-                <Button type="submit" colorScheme="green">
-                  Submit
-                </Button>
-              </form>
-              <div className="buttons">
-              {submit1 ? (
-                <Button colorScheme="red" onClick={nextDetail}>
-                  Next →
-                </Button>
-              ) : (
-                <Button isDisabled colorScheme="red" onClick={nextDetail}>
-                  Next →
-                </Button>
-              )}
-            </div>
+                  <Button type="submit" colorScheme="green">
+                    Submit
+                  </Button>
+                </form>
+                <div className="buttons">
+                  {submit1 ? (
+                    <Button colorScheme="red" onClick={nextDetail}>
+                      Next →
+                    </Button>
+                  ) : (
+                    <Button isDisabled colorScheme="red" onClick={nextDetail}>
+                      Next →
+                    </Button>
+                  )}
+                </div>
               </div>
-              
-            <div className="form-parent-2">
-              <img src={SignIn} alt="" id="sign-in-img" />
-            </div>
+
+              <div className="form-parent-2">
+                <img src={SignIn} alt="" id="sign-in-img" />
+              </div>
             </div>
             <Link
               to="/login"
@@ -209,11 +215,10 @@ export default function Signup() {
               Already a user?Login here...
             </Link>
           </div>
-          
         );
       case 2:
         return (
-          <div className="form-parent" >
+          <div className="form-parent">
             <ToastContainer />
             <Link
               to="/login"
@@ -221,7 +226,7 @@ export default function Signup() {
                 fontSize: "2vmin",
                 color: "green",
                 textDecoration: "underline",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Already a user?Login here...
@@ -244,7 +249,6 @@ export default function Signup() {
                   {...register("address", {
                     required: "Address is required",
                   })}
-
                   value={signupData.address || ""}
                   onChange={(e) =>
                     setSignupData({ ...signupData, address: e.target.value })
@@ -331,7 +335,6 @@ export default function Signup() {
               </Button>
             </form>
             <div className="buttons">
-
               <Button
                 onClick={lastDetail}
                 color="white"
@@ -494,5 +497,16 @@ export default function Signup() {
         );
     }
   };
-  return <div style={{flex:1,display:"flex",justifyContent:"center",alignItems:"center"}}>{pageRender()}</div>;
+  return (
+    <div
+      style={{
+        flex: 1,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {pageRender()}
+    </div>
+  );
 }

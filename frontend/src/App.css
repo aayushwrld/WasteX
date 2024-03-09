@@ -124,6 +124,7 @@ a6[data-active] {
   align-items: center;
 }
 
+
 .complaint-box {
   /* line-height: 3vmax; */
   display: flex;
@@ -203,7 +204,6 @@ a6[data-active] {
 }
 
 .buttons {
-
   display: flex;
   /* gap: 1vmax; */
   /* justify-content: center; */
@@ -223,7 +223,7 @@ a6[data-active] {
   /* background-color:#fefed4; */
   gap: 2vmin;
 }
-.form-1{
+.form-1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,7 +235,7 @@ a6[data-active] {
   /* background-color: #fefed4; */
   gap: 2.5vmin;
 }
-.donation-form{
+.donation-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,12 +413,22 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1vmax;
   height: 100%;
   cursor: pointer;
   transition: all 0.2s;
+  position: relative;
+}
+.comp {
+  align-items: center;
+}
+.house-animation {
+  position: absolute;
+  top: -4vmax;
+  left: -1vmax;
+  width: 4vmax;
 }
 .loading {
   width: 100vw;
@@ -443,10 +453,10 @@ a {
   transition: all 0.2s;
 }
 .card-author {
-  align-self: flex-end;
+  align-self: flex-start;
 }
 .card-tagline {
-  font-size: 1.2vmax;
+  font-size: 1.5vmax;
   font-weight: 700;
 }
 .newPostBtn {
@@ -568,7 +578,6 @@ a {
     font-size: 50vmax;
   }
 
-  
   .donation-ref {
     gap: 9vmax;
   }
@@ -584,7 +593,7 @@ a {
     padding: 3vmin;
     width: 95%;
   }
-  
+
   #sign-in-img {
     width: 80rem;
   }
@@ -617,13 +626,13 @@ a {
   }
   .form-img-parent {
     flex-direction: column;
-  gap: 2rem;
+    gap: 2rem;
   }
-  
+
   #sign-in-img {
     width: 70rem;
   }
-  
+
   .form {
     gap: 4vmin;
   }
