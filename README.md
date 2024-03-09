@@ -76,8 +76,7 @@ This project addresses the critical issue of improper waste disposal within resi
 
 ### Interactive Complaint Form, with feature to upload to upload image (BLOB)
 
-![Uploading image.png…]()
-
+![image](https://github.com/aayushharora/WasteX/assets/142983808/2e628bc0-4ce4-417d-8158-f533518b196e)
 
 
 Project by - Rikhil, Aayush, Dwij, Pranshu
