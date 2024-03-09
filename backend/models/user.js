@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
     }],
     posts: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Blog",
+        ref: "Post",
     }],
     contact: {
         phone: {
