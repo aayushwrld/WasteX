@@ -149,10 +149,7 @@ export default function Navbar() {
                     </MenuItem>
                   </Link>
 
-                  <Link to="/faq">
-                    <MenuItem icon={<FaClipboardQuestion />}>FAQ</MenuItem>
-
-                  </Link>
+                 
 
                   <Link to="/about">
                     <MenuItem icon={<RiTeamFill />}>About Us</MenuItem>
@@ -242,28 +239,7 @@ export default function Navbar() {
                   </Link>
                 </Menu>
 
-                <Menu>
-                  <Link to="/faq">
-                    <MenuButton
-                      as={Button}
-                      leftIcon={<FaClipboardQuestion />}
-                      sx={{
-                        backgroundColor: "#00a200",
-                        color: "white",
-                        fontSize: "1.2vmax",
-
-                        ":hover": {
-                          backgroundColor: "darkgreen",
-                        },
-                        ":active": {
-                          backgroundColor: "green",
-                        },
-                      }}
-                    >
-                      FAQ
-                    </MenuButton>
-                  </Link>
-                </Menu>
+                
 
                 <Menu>{loginBtn2()}</Menu>
 
