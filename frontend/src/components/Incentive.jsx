@@ -63,7 +63,7 @@ export default function Listings() {
           }}
         >
           <div className="username">Hello, {login ? username : "Guest"}!</div>
-          <SimpleGrid columns={[2, 2, 3, 4]} spacing={10}>
+          <SimpleGrid columns={[1, 2, 3, 4]} spacing={10}>
             {posts.map((e, i) => {
               return <Card data={posts[i]} key={i}  />;
             })}

@@ -196,6 +196,7 @@ export default function Complaint() {
                       <Input
                         type="text"
                         borderColor="black"
+                        backgroundColor="ivory"
                         {...register("title", {
                           required: "Title is required",
                           maxLength: { value: 40, message: "Max 40 Chars" },
@@ -210,6 +211,7 @@ export default function Complaint() {
                       <Textarea
                         type="text"
                         borderColor="black"
+                        backgroundColor="ivory"
                         {...register("description", {
                           required: "Please provide the required description",
                         })}
@@ -265,6 +267,7 @@ export default function Complaint() {
                       <Input
                         type="text"
                         borderColor="black"
+                        backgroundColor="ivory"
                         {...register("address", {
                           required: "Address is required",
                         })}

@@ -88,6 +88,7 @@ export default function Login() {
           <Input
             type="text"
             border="2px solid green"
+            backgroundColor="ivory"
             {...register("username", {
               required: "Username is required",
             })}
@@ -101,6 +102,7 @@ export default function Login() {
           <Input
             type="password"
             border="2px solid green"
+            backgroundColor="ivory"
             {...register("password", {
               required: "Password Required",
               minLength: {
