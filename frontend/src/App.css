@@ -36,6 +36,7 @@
 
 .form-img-parent {
   /* flex-wrap: wrap; */
+  /* flex-direction: column; */
   gap: 10rem;
 }
 
@@ -608,17 +609,16 @@ a {
   .society-users {
     font-size: 2vmax;
   }
-}
-
   .form-img-parent {
     flex-direction: column;
   gap: 2rem;
   }
-
+  
   #sign-in-img {
     width: 70rem;
   }
-
+  
   .form {
     gap: 4vmin;
   }
+}

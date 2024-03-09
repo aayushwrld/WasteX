@@ -91,7 +91,7 @@ function PostListings() {
               padding: "3vmax",
             }}
           >
-            <div><img src={selectedPost.image} /></div>
+            <div><img src={selectedPost && selectedPost.image} /></div>
             <div>{selectedPost && selectedPost.description}</div>
           </ModalBody>
         </ModalContent>
