@@ -22,7 +22,7 @@ function PostListings() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/posts`)
+      .get(`https://waste-x-gamma.vercel.app/posts`)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
@@ -73,7 +73,7 @@ function PostListings() {
           </SimpleGrid>
         </div>
       )}
-      <Modal isOpen={isOpen} onClose={onClose}>
+      {/* <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent
           style={{
@@ -95,7 +95,7 @@ function PostListings() {
             <div>{selectedPost && selectedPost.description}</div>
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal> */}
       <ToastContainer />
       <Button onClick={() => navigate("/newpost")}>+</Button>
     </div>

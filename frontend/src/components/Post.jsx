@@ -18,10 +18,8 @@ export default function Post({ data, onClick }) {
   return (
     <Box
       border="green 3px solid"
-      padding="2vmin"
+      padding="2vmin 0"
       borderRadius="10px"
-      width="20vmax"
-      height="20vmax"
       onClick={handlePostClick} // Call handlePostClick when the post is clicked
       cursor="pointer" // Add cursor pointer to indicate it's clickable
     >
@@ -31,7 +29,7 @@ export default function Post({ data, onClick }) {
           <img
             src={data.image}
             alt=""
-            style={{ width: "15vmax", height: "10vmax" }}
+            style={{ width: "15vmax", height: "10vmax", borderRadius:"10px" }}
           />
         </div>
         <div className="card-title">

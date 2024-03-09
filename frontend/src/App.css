@@ -235,6 +235,13 @@ a6[data-active] {
   /* background-color: #fefed4; */
   gap: 2.5vmin;
 }
+.donation-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vmin;
+  justify-content: center;
+}
 .form1 {
   display: flex;
   flex-direction: column;
@@ -340,7 +347,7 @@ a6[data-active] {
 
 .home-parent {
   flex: 1;
-  padding: 4.5vmax;
+  padding: 3vmax 4.5vmax;
   display: flex;
   color: green;
   justify-content: space-between;
@@ -355,7 +362,7 @@ a6[data-active] {
 }
 
 .right-img {
-  width: 50vmax;
+  width: 39vmax;
 }
 
 .right-img-div {
@@ -406,13 +413,11 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  justify-content: space-between;
-  gap: 2vmax;
-  height: 100%;
+  /* justify-content: space-between; */
+  gap: 1vmax;
+  /* height: 100%; */
   cursor: pointer;
-
   transition: all 0.2s;
 }
 .loading {
@@ -489,12 +494,13 @@ a {
 }
 /* Donation page */
 .donation-div {
-  padding: 5vmax;
+  padding: 3vmax;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 5vmax;
 }
 
 .donationImg {

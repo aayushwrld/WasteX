@@ -3,7 +3,8 @@ import { Center, SimpleGrid, Text } from "@chakra-ui/react";
 import back from "./../assets/back.png";
 import { Button } from "@chakra-ui/button";
 import { useNavigate } from "react-router";
-import bgImg from "./../assets/bg-img.png";
+import bgImg from "./../assets/home-img.png";
+
 
 
 const Home = () => {
