@@ -42,11 +42,11 @@ export default function Complaint() {
 
   function nextDetail() {
     setCount(count + 1);
-    setLength((count + 1) * 33.3);
+    setLength(count * 25);
   }
   function lastDetail() {
     setCount(count - 1);
-    setLength(1);
+    setLength((count - 2) * 25);
   }
   const navigate = useNavigate();
   const {
@@ -68,7 +68,7 @@ export default function Complaint() {
     }));
   }
   function handleSubmitForm2(data) {
-    setCity(data.city)
+    setCity(data.city);
     setSubmit2(true);
     // console.log(data.address);
     setComp((prevData) => ({
@@ -105,12 +105,13 @@ export default function Complaint() {
   };
 
   let finalSubmit = () => {
-    let finalCity
-    cities.map((e,i)=>{
-      if(e.cityName === city){
-        finalCity = e
+    setLength(100);
+    let finalCity;
+    cities.map((e, i) => {
+      if (e.cityName === city) {
+        finalCity = e;
       }
-    })
+    });
     // console.log(finalCity.supportEmail)
     const id = toast.loading("Registering Complaint...");
     axios
@@ -124,7 +125,7 @@ export default function Complaint() {
         setTimeout(() => {
           navigate("/complaints");
           setTimeout(() => {
-          window.location.href = `mailto:${finalCity.supportEmail}?subject=${comp.title}&body=${comp.description}`;
+            window.location.href = `mailto:${finalCity.supportEmail}?subject=${comp.title}&body=${comp.description}`;
           }, 1500);
         }, 1500);
       })
@@ -356,11 +357,11 @@ export default function Complaint() {
   }
   return (
     <div className="complaint-parent">
-      {/* <div className="progress-div">
+      <div className="progress-div">
         <div className="progress-bar">
           <div className="progress" style={{ width: `${length}%` }}></div>
         </div>
-      </div> */}
+      </div>
       {complaint()}
     </div>
   );

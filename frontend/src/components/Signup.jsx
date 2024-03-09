@@ -28,7 +28,6 @@ export default function Signup() {
     setCount(count + 1);
   }
   function lastDetail() {
-    
     setCount(count - 1);
   }
   const {
@@ -46,7 +45,7 @@ export default function Signup() {
     });
   }, []);
   const FormSubmitHandler1 = (formData) => {
-    setSubmit1(true)
+    setSubmit1(true);
     console.log(formData);
     setSignupData((prev) => ({
       ...prev,
@@ -57,7 +56,7 @@ export default function Signup() {
   };
   const FormSubmitHandler2 = (formData) => {
     console.log(formData);
-    setSubmit2(true)
+    setSubmit2(true);
     setSignupData((prev) => ({
       ...prev,
       name: formData.name,
@@ -69,7 +68,6 @@ export default function Signup() {
   // console.log(watch())
   const { login, setLogin } = useContext(AppContext);
   const finalSubmit = () => {
-
     const id = toast.loading("Signing Up...");
     setTimeout(() => {
       axios
@@ -97,7 +95,7 @@ export default function Signup() {
             isLoading: false,
           });
           setTimeout(() => {
-            navigate("/signup")
+            navigate("/signup");
           }, 1200);
         });
     }, 1000);
@@ -105,8 +103,6 @@ export default function Signup() {
   const pageRender = () => {
     switch (count) {
       case 1:
-
-
         return (
           <div className="form-parent">
             <ToastContainer />
@@ -140,8 +136,10 @@ export default function Signup() {
                   {...register("username", {
                     required: "Username is required",
                   })}
-                  value={signupData.username || ''} // Set value from state
-                  onChange={(e) => setSignupData({...signupData, username: e.target.value})} // Update state on change
+                  value={signupData.username || ""} // Set value from state
+                  onChange={(e) =>
+                    setSignupData({ ...signupData, username: e.target.value })
+                  } // Update state on change
                 />
                 <p className="err">{errors.username?.message}</p>
               </FormControl>
@@ -186,8 +184,6 @@ export default function Signup() {
               </Button>
             </form>
             <div className="buttons">
-              
-
               {submit1 ? (
                 <Button colorScheme="red" onClick={nextDetail}>
                   Next
@@ -199,136 +195,148 @@ export default function Signup() {
               )}
             </div>
           </div>
-        );      
-        case 2:
-          return (
-            <div className="form-parent">
-              <ToastContainer />
-              <Link
-                to="/login"
-                style={{
-                  fontSize: "2vmin",
-                  color: "green",
-                  textDecoration: "underline",
-                  textAlign: "center",
-                  paddingTop: "1vmax",
-                }}
-              >
-                Already a user?Login here...
-              </Link>
-              <br />
-              <form className="form1" onSubmit={handleSubmit(FormSubmitHandler2)}>
-                <Text as="b" fontSize="2.3vmax">
-                  Complete Your Profile
-                </Text>
-                <Text as="i" fontSize="1vmax">
-                  Enter your address and select your society!
-                </Text>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Address
-                  </FormLabel>
-                  <Input
-                    type="text"
-                    borderColor="#D0D5FA"
-                    {...register("address", {
-                      required: "Address is required",
-                    })}
-                    value={signupData.address || ''}
-                    onChange={(e) => setSignupData({...signupData, address: e.target.value})}
-                  />
-                  <p className="err">{errors.address?.message}</p>
-                </FormControl>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Society
-                  </FormLabel>
-                  <Select
-                    placeholder="Select option"
-                    borderColor="#D0D5FA"
-                    {...register("society", {
-                      required: "Society is required",
-                    })}
-                    value={signupData.society || ''}
-                    onChange={(e) => setSignupData({...signupData, society: e.target.value})}
-                  >
-                    {society.map((e, i) => {
-                      return (
-                        <option key={i} value={e.name}>
-                          {e.name}
-                        </option>
-                      );
-                    })}
-                  </Select>
-                  <p className="err">{errors.society?.message}</p>
-                </FormControl>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Phone no.
-                  </FormLabel>
-                  <Input
-                    type="number"
-                    borderColor="#D0D5FA"
-                    {...register("contact.phone", {
-                      required: "Phone no is required",
-                      minLength: {
-                        value: 10,
-                        message: "Minimum 10 digits required",
-                      },
-                      maxLength: {
-                        value: 10,
-                        message: "Maximum 10 digits required",
-                      },
-                    })}
-                    value={signupData.contact?.phone || ''}
-                    onChange={(e) => setSignupData({...signupData, contact: {...signupData.contact, phone: e.target.value}})}
-                  />
-                  <p className="err">{errors.contact?.phone?.message}</p>
-                </FormControl>
-                <FormControl>
-                  <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
-                    Email
-                  </FormLabel>
-                  <Input
-                    type="email"
-                    borderColor="#D0D5FA"
-                    {...register("contact.email", {
-                      required: "Email is required",
-                    })}
-                    value={signupData.contact?.email || ''}
-                    onChange={(e) => setSignupData({...signupData, contact: {...signupData.contact, email: e.target.value}})}
-                  />
-                  <p className="err">{errors.contact?.email?.message}</p>
-                </FormControl>
-  
-                <Button type="submit" colorScheme="green">
-                  Submit
-                </Button>
-              </form>
-              <div className="buttons">
-                <Button
-                  onClick={lastDetail}
-                  color="white"
-                  backgroundColor="greenyellow"
+        );
+      case 2:
+        return (
+          <div className="form-parent">
+            <ToastContainer />
+            <Link
+              to="/login"
+              style={{
+                fontSize: "2vmin",
+                color: "green",
+                textDecoration: "underline",
+                textAlign: "center",
+                paddingTop: "1vmax",
+              }}
+            >
+              Already a user?Login here...
+            </Link>
+            <br />
+            <form className="form1" onSubmit={handleSubmit(FormSubmitHandler2)}>
+              <Text as="b" fontSize="2.3vmax">
+                Complete Your Profile
+              </Text>
+              <Text as="i" fontSize="1vmax">
+                Enter your address and select your society!
+              </Text>
+              <FormControl>
+                <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                  Address
+                </FormLabel>
+                <Input
+                  type="text"
+                  borderColor="#D0D5FA"
+                  {...register("address", {
+                    required: "Address is required",
+                  })}
+                  value={signupData.address || ""}
+                  onChange={(e) =>
+                    setSignupData({ ...signupData, address: e.target.value })
+                  }
+                />
+                <p className="err">{errors.address?.message}</p>
+              </FormControl>
+              <FormControl>
+                <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                  Society
+                </FormLabel>
+                <Select
+                  placeholder="Select option"
+                  borderColor="#D0D5FA"
+                  {...register("society", {
+                    required: "Society is required",
+                  })}
+                  value={signupData.society || ""}
+                  onChange={(e) =>
+                    setSignupData({ ...signupData, society: e.target.value })
+                  }
                 >
-                  Back
+                  {society.map((e, i) => {
+                    return (
+                      <option key={i} value={e.name}>
+                        {e.name}
+                      </option>
+                    );
+                  })}
+                </Select>
+                <p className="err">{errors.society?.message}</p>
+              </FormControl>
+              <FormControl>
+                <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                  Phone no.
+                </FormLabel>
+                <Input
+                  type="number"
+                  borderColor="#D0D5FA"
+                  {...register("contact.phone", {
+                    required: "Phone no is required",
+                    minLength: {
+                      value: 10,
+                      message: "Minimum 10 digits required",
+                    },
+                    maxLength: {
+                      value: 10,
+                      message: "Maximum 10 digits required",
+                    },
+                  })}
+                  value={signupData.contact?.phone || ""}
+                  onChange={(e) =>
+                    setSignupData({
+                      ...signupData,
+                      contact: { ...signupData.contact, phone: e.target.value },
+                    })
+                  }
+                />
+                <p className="err">{errors.contact?.phone?.message}</p>
+              </FormControl>
+              <FormControl>
+                <FormLabel fontSize="1.2vmax" as="i" fontWeight="550">
+                  Email
+                </FormLabel>
+                <Input
+                  type="email"
+                  borderColor="#D0D5FA"
+                  {...register("contact.email", {
+                    required: "Email is required",
+                  })}
+                  value={signupData.contact?.email || ""}
+                  onChange={(e) =>
+                    setSignupData({
+                      ...signupData,
+                      contact: { ...signupData.contact, email: e.target.value },
+                    })
+                  }
+                />
+                <p className="err">{errors.contact?.email?.message}</p>
+              </FormControl>
+
+              <Button type="submit" colorScheme="green">
+                Submit
+              </Button>
+            </form>
+            <div className="buttons">
+              <Button
+                onClick={lastDetail}
+                color="white"
+                backgroundColor="greenyellow"
+              >
+                Back
+              </Button>
+
+              {submit2 ? (
+                <Button colorScheme="red" onClick={finalSubmit}>
+                  Finish
                 </Button>
-  
-                {submit2 ? (
-                  <Button colorScheme="red" onClick={finalSubmit}>
-                    Finish
-                  </Button>
-                ) : (
-                  <Button isDisabled colorScheme="red" onClick={finalSubmit}>
-                    Finish
-                  </Button>
-                )}
-              </div>
+              ) : (
+                <Button isDisabled colorScheme="red" onClick={finalSubmit}>
+                  Finish
+                </Button>
+              )}
             </div>
-          );
+          </div>
+        );
     }
   };
-  return (
-    <div>{pageRender()}</div>
-  );
+  return <div>{pageRender()}</div>;
 }

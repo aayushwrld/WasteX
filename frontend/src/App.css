@@ -33,7 +33,6 @@
   /* color: rgb(198, 232, 255); */
 }
 
-
 .err {
   color: red;
   font-size: 1.5vmin;
@@ -236,7 +235,8 @@ a6[data-active] {
   font-weight: 500;
 }
 
-.content, .content-2 {
+.content,
+.content-2 {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -270,7 +270,7 @@ a6[data-active] {
   opacity: 0.5;
 }
 
-#back-img-2{
+#back-img-2 {
   filter: grayscale(100%);
   width: 2.5rem;
   z-index: -10;
@@ -305,7 +305,6 @@ a6[data-active] {
 #arrow {
   cursor: pointer;
 }
-
 
 /* Home */
 
@@ -446,7 +445,9 @@ a {
   align-items: baseline;
 }
 
-.residents-1, .residents-2, .residents-3 {
+.residents-1,
+.residents-2,
+.residents-3 {
   gap: 1rem;
 }
 
@@ -489,6 +490,20 @@ a {
   font-weight: 900;
   color: green;
 }
+/* User post */
+.blog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-username {
+  font-size: 2vmax;
+  font-style: italic;
+}
+.blog-title {
+  font-size: 3vmax;
+  font-weight: 900;
+}
 
 /* Media query */
 @media (max-width: 600px) {
@@ -506,7 +521,8 @@ a {
     text-align: center;
   }
 
-  .content, .content-2 {
+  .content,
+  .content-2 {
     flex-direction: column;
     text-align: center;
     gap: 1vh;
@@ -515,10 +531,9 @@ a {
   .category-btn {
     font-size: 50vmax;
   }
-  
+
   .donation-ref {
     gap: 9vmax;
-
   }
   .form1 {
     width: 70vw;
@@ -532,7 +547,6 @@ a {
     padding: 3vmin;
     width: 95%;
   }
-  
 }
 
 @media only screen and (max-width: 800px) {
@@ -554,7 +568,7 @@ a {
 
   .residents-parent {
     border: 2px solid #1a202c;
-  width: 20rem;
+    width: 20rem;
   }
 
   .society-users {
