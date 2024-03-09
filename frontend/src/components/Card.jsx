@@ -19,11 +19,11 @@ export default function Card({ data }) {
       border="green 3px solid"
       padding="2vmin"
       borderRadius="10px"
-      width="20vmax"
-      height="20vmax"
+      onClick={cardClick}
+      cursor={"pointer"}
     >
       <ToastContainer />
-      <div className="card" onClick={cardClick}>
+      <div className="card">
         {/* <div className="card-img" onClick={cardClick}>
           <img src={data.image} alt="twitter bird caged" />
         </div> */}
@@ -43,22 +43,6 @@ export default function Card({ data }) {
             ~{data.location}
           </Text>
         </div>
-        {/* <div className="card-social">
-          <div className="likes">
-            <IoHeart
-              onClick={() => {
-                setLike(!like);
-              }}
-              size="1.5vmax"
-              color={like ? "red" : "black"}
-            />
-            {data.likes}
-          </div>
-          <div className="comments">
-            <VscCommentDiscussion size="1.5vmax" />
-            {data.comments}
-          </div>
-        </div> */}
       </div>
     </Box>
   );

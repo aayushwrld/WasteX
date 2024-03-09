@@ -195,7 +195,7 @@ a6[data-active] {
   align-items: center;
   /* background-color: aliceblue; */
   /* color: rgb(198, 232, 255); */
-  gap: 4vmax;
+  /* gap: 4vmax; */
 }
 
 #sign-in-img {
@@ -399,7 +399,7 @@ a {
 
 #listings-parent {
   flex: 1;
-  padding: 2vmin;
+  padding: 2vmin 5vmax;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,9 +414,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   gap: 1vmax;
-  /* height: 100%; */
+  height: 100%;
   cursor: pointer;
   transition: all 0.2s;
 }

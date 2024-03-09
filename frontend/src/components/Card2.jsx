@@ -15,18 +15,18 @@ export default function Card2({ data }) {
       border="green 3px solid"
       padding="2vmin"
       borderRadius="10px"
-      width="20vmax"
-      height="20vmax"
     >
       <ToastContainer />
       <div className="card">
         <div className="card-tagline" fontSize="2vmax">
 
-          <img src={data.image} alt="" style={{width:"15vmax", height:"10vmax"}}/>
+          <img src={data.image} alt="" style={{width:"17vmax", height:"10vmax", borderRadius:"10px"}}/>
         </div>
         <div className="card-title">
           <Text textAlign="center" fontWeight="extrabold" fontSize="1.5vmax">
-            {data.title}
+          {data.title.length > 25
+            ? data.title.substr(0, 25) + "..."
+            : data.title}
           </Text>
         </div>
       </div>
