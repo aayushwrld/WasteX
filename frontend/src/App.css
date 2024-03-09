@@ -26,11 +26,17 @@
   flex: 1;
   padding: 5vmin 10vmin;
   display: flex;
+  /* gap: 5vmin; */
   flex-direction: column;
-  align-items: center;
+  align-items: space-around;
   justify-content: center;
   /* background-color: aliceblue; */
   /* color: rgb(198, 232, 255); */
+}
+
+.form-img-parent {
+  /* flex-wrap: wrap; */
+  gap: 10rem;
 }
 
 .err {
@@ -48,6 +54,7 @@
 /* NavBar -------------------*/
 
 .nav-parent {
+  z-index: 100;
   font-family: Urbanist;
   display: flex;
   justify-content: center;
@@ -110,10 +117,6 @@ a6[data-active] {
   font-size: 1.2vmax;
 }
 
-.category-btn {
-  font-size: 1.2vmax;
-}
-
 .tag-line {
   display: flex;
   justify-content: center;
@@ -124,7 +127,13 @@ a6[data-active] {
   /* line-height: 3vmax; */
   display: flex;
   flex-direction: column;
-  gap: 1vmax;
+  padding-top: 5vw;
+  gap: 3vmax;
+}
+
+.details-form {
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .complaint-parent {
@@ -181,40 +190,60 @@ a6[data-active] {
   flex: 1;
   padding: 5vmin 10vmin;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   /* background-color: aliceblue; */
   /* color: rgb(198, 232, 255); */
+  gap: 4vmax;
+}
+
+#sign-in-img {
+  width: 50vmax;
 }
 
 .buttons {
+
   display: flex;
-  gap: 1vmax;
+  /* gap: 1vmax; */
+  /* justify-content: center; */
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
+  justify-content: center;
   /* width: 47vw; */
   /* height: 50vh; */
   /* padding: 2vmin; */
   /* border-radius: 10px; */
   /* border: 3px green solid; */
   /* background-color:#fefed4; */
-  gap: 1vmin;
+  gap: 2vmin;
 }
-
+.form-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  /* padding: 2vmin; */
+  /* border-radius: 10px; */
+  /* border: 3px green solid; */
+  /* background-color: #fefed4; */
+  gap: 2.5vmin;
+}
 .form1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 43vw;
-  padding: 2vmin;
-  border-radius: 10px;
-  border: 3px green solid;
-  background-color: #fefed4;
+  width: 100%;
+  /* padding: 2vmin; */
+  /* border-radius: 10px; */
+  /* border: 3px green solid; */
+  /* background-color: #fefed4; */
   gap: 2vmin;
 }
 
@@ -363,10 +392,10 @@ a {
 #listings-parent {
   flex: 1;
   padding: 2vmin;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
 }
 .username {
   color: rgb(77, 125, 5);
@@ -424,7 +453,7 @@ a {
   width: 35vmax;
   height: 7vmax;
   text-align: center;
-  font-size: 4vmax;
+  font-size: 3vmax;
   padding-top: 2vmax;
   gap: 1.5rem;
 }
@@ -532,6 +561,7 @@ a {
     font-size: 50vmax;
   }
 
+  
   .donation-ref {
     gap: 9vmax;
   }
@@ -546,6 +576,10 @@ a {
     font-size: 2vmax;
     padding: 3vmin;
     width: 95%;
+  }
+  
+  #sign-in-img {
+    width: 80rem;
   }
 }
 
@@ -575,3 +609,16 @@ a {
     font-size: 2vmax;
   }
 }
+
+  .form-img-parent {
+    flex-direction: column;
+  gap: 2rem;
+  }
+
+  #sign-in-img {
+    width: 70rem;
+  }
+
+  .form {
+    gap: 4vmin;
+  }

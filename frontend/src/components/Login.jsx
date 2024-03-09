@@ -9,6 +9,7 @@ import axios from "axios";
 import { setCookie } from "../utils/cookie";
 import { AppContext } from "./Context";
 import { loginCheck } from "../utils/loginCheck";
+import SignIn from "../assets/SignIn.png"
 
 export default function Login() {
   const navigate = useNavigate();
@@ -67,21 +68,12 @@ export default function Login() {
   };
 
   return (
-    <div className="form-parent">
+    <div className="form-parent flex">
       <ToastContainer />
-      <Link
-        to="/signup"
-        style={{
-          fontSize: "2vmin",
-          color: "green",
-          textDecoration: "underline",
-          textAlign: "center",
-          paddingTop: "1vmax",
-        }}
-      >
-        Not a member? Signup here...
-      </Link>
+
       <br />
+      <div className="form-img-parent flex">
+
       <form className="form" onSubmit={handleSubmit(FormSubmitHandler)}>
         <Text as="b" fontSize="2.3vmax">
           Welcome Back..!
@@ -95,11 +87,11 @@ export default function Login() {
           </FormLabel>
           <Input
             type="text"
-            borderColor="#D0D5FA"
+            border="2px solid green"
             {...register("username", {
               required: "Username is required",
             })}
-          />
+            />
           <p className="err">{errors.username?.message}</p>
         </FormControl>
         <FormControl>
@@ -108,7 +100,7 @@ export default function Login() {
           </FormLabel>
           <Input
             type="password"
-            borderColor="#D0D5FA"
+            border="2px solid green"
             {...register("password", {
               required: "Password Required",
               minLength: {
@@ -118,10 +110,10 @@ export default function Login() {
               pattern: {
                 value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
                 message:
-                  "Password Not Valid (Use Special Characters & Numbers)",
+                "Password Not Valid (Use Special Characters & Numbers)",
               },
             })}
-          />
+            />
           <p className="err">{errors.password?.message}</p>
         </FormControl>
         <Button type="submit" colorScheme="green">
@@ -129,6 +121,23 @@ export default function Login() {
         </Button>
       </form>
       
+    <div className="form-parent-2">
+      <img src={SignIn} alt="" id="sign-in-img"/>
+    </div>
+    
+            </div>
+            <Link
+        to="/signup"
+        style={{
+          fontSize: "2vmin",
+          color: "green",
+          textDecoration: "underline",
+          textAlign: "center",
+          paddingTop: "4vmax"
+        }}
+      >
+        Not a member? Signup here...
+      </Link>
     </div>
   );
 }

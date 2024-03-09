@@ -16,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdOutlineSyncProblem } from "react-icons/md";
+import { color } from "framer-motion";
 
 export default function Complaint() {
   const [comp, setComp] = useState({});
@@ -155,12 +157,15 @@ export default function Complaint() {
                     <Button
                       key={index}
                       className="category-btn"
+                      fontSize={"1.5vmax"}
                       background="none"
                       border="3px green solid"
                       height="6vmax"
                       width="100%"
                       onClick={() => handleButtonClick(category)}
                     >
+                      <MdOutlineSyncProblem />
+                      &nbsp;
                       {category}
                     </Button>
                   ))}
@@ -179,9 +184,9 @@ export default function Complaint() {
                 <div className="tag-subHeading">
                   It will help us work on it ASAP..
                 </div>
-                <div className="form-parent">
+                <div className="detail-form-parent">
                   <form
-                    className="form"
+                    className="details-form flex"
                     onSubmit={handleSubmit(handleSubmitForm1)}
                   >
                     <FormControl>
@@ -225,7 +230,9 @@ export default function Complaint() {
                     >
                       Back
                     </Button>
-
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
                     {submit1 ? (
                       <Button colorScheme="red" onClick={nextDetail}>
                         Next
