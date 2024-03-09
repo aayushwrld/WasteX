@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { getCookie } from "../utils/cookie";
+import { BsHousesFill } from "react-icons/bs";
 import {
   BarLoader,
   ClimbingBoxLoader,
@@ -15,6 +16,7 @@ import {
   PulseLoader,
   RiseLoader,
 } from "react-spinners";
+import Resident from "./Resident";
 
 export default function CardDetail() {
   let loadersArray = [
@@ -27,6 +29,9 @@ export default function CardDetail() {
     <PulseLoader color="green" />,
     <RiseLoader color="green" />,
   ];
+
+  
+
   let randomLoader = Math.floor(Math.random() * 8);
   const navigate = useNavigate();
   const username = getCookie("username");
@@ -63,12 +68,13 @@ export default function CardDetail() {
         <div className="loading">{loadersArray[randomLoader]}</div>
       ) : (
         <div className="society-data">
-          <div className="society-name">{societyData.name}</div>
-          <div className="society-users">
-            {residentsData.map((resident) => (
-              <div>
-                <li>{resident.name}</li>
-              </div>
+          <div className="society-name flex">
+            <BsHousesFill />
+            {societyData.name}
+            </div>
+          <div className="society-users flex">
+            {residentsData.map((resident, i) => (
+              <Resident key={i} details={resident}/>
             ))}
           </div>
         </div>

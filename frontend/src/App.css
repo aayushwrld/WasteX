@@ -16,6 +16,12 @@
   background-color: #fefed4;
 }
 
+.about-parent {
+  margin: 4vw;
+  border-radius: 2vw;
+  background-color: rgb(0, 162, 0);
+}
+
 .form-parent {
   flex: 1;
   padding: 5vmin 10vmin;
@@ -252,7 +258,6 @@ a6[data-active] {
   width: 50%;
 }
 
-
 .bg-elements {
   position: absolute;
   z-index: -2;
@@ -270,7 +275,6 @@ a6[data-active] {
   width: 2.5rem;
   z-index: -10;
   opacity: 0.5;
-
 }
 
 .edu-text-1 {
@@ -384,7 +388,7 @@ a {
 }
 .loading {
   width: 100vw;
-  /* height: 85vh; */
+  /* height: 100%; */
   flex: 1;
   display: flex;
   justify-content: center;
@@ -421,14 +425,31 @@ a {
   width: 35vmax;
   height: 7vmax;
   text-align: center;
-  font-size: 5vmax;
+  font-size: 4vmax;
   padding-top: 2vmax;
-  /* border: 3px green solid; */
-  /* border-radius: 20px; */
+  gap: 1.5rem;
 }
+
 .society-users {
-  font-size: 2.3vmax;
+  font-size: 1.5vmax;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
+
+.residents-parent {
+  width: 30rem;
+  border: 4px solid #1a202c;
+  border-radius: 20px;
+  padding: 2vw;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.residents-1, .residents-2, .residents-3 {
+  gap: 1rem;
+}
+
 .society-data {
   display: flex;
   flex-direction: column;
@@ -444,9 +465,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .donationImg {
   width: 35vmax;
 }
+
 .donation-ref {
   display: flex;
   flex-direction: column;
@@ -454,9 +477,11 @@ a {
   gap: 3vmax;
   align-items: center;
 }
+
 .donation-form {
   width: 100%;
 }
+
 .donation-text {
   font-size: 3vmax;
   max-width: 45vmax;
@@ -525,5 +550,14 @@ a {
 
   .edu-text-1 {
     font-weight: 900;
+  }
+
+  .residents-parent {
+    border: 2px solid #1a202c;
+  width: 20rem;
+  }
+
+  .society-users {
+    font-size: 2vmax;
   }
 }

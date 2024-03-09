@@ -3,8 +3,7 @@ import React from 'react'
 function About() {
   return (
     <>
-    <div>
-
+    <div className='about-parent'>
     Welcome to [WasteX], where we're passionate about revolutionizing waste management for a cleaner, greener world. Our journey began with a simple yet profound realization: improper waste disposal not only harms the environment but also jeopardizes the well-being of communities worldwide.
 
 Our Mission

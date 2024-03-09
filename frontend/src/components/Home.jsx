@@ -23,7 +23,7 @@ const Home = () => {
           <div className="sub-moto">
             Revolutionizing Waste Management Together
           </div>
-          <a onClick={regiNavigate}>Get Started with society registeration--</a>
+          <a onClick={regiNavigate}>Want to register your society? Click here</a>
           <Button
             width="11vmax"
             backgroundColor="#fefed4"
