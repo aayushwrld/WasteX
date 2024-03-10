@@ -83,6 +83,17 @@ This project addresses the critical issue of improper waste disposal within resi
 
 ![image](https://github.com/aayushharora/WasteX/assets/142983808/2e628bc0-4ce4-417d-8158-f533518b196e)
 
+## Mobile Responsive!
+This website is completely mobile friendly..! Checkout the screenshots below.
 
-Project by - Rikhil, Aayush, Dwij, Pranshu
+![image](https://github.com/aayushharora/WasteX/assets/112085869/3d90b1e5-9153-4183-9007-326c9297d764)
+
+![image](https://github.com/aayushharora/WasteX/assets/112085869/5d62aee0-98ca-4aa0-a877-99e2a36dc4cd)
+
+![image](https://github.com/aayushharora/WasteX/assets/112085869/0482bb82-f08a-47a0-95b0-09daa194f3a7)
+
+![image](https://github.com/aayushharora/WasteX/assets/112085869/ee06178c-9347-47ac-b996-4c234d34950d)
+
+
+Project by - [Rikhil](https://github.com/rikhil7), [Aayush](https://github.com/aayushwrld), [Dwij](https://github.com/dwij13), [Pranshu](https://github.com/pranshupandey19)
 
