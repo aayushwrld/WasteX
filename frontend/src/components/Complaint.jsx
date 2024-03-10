@@ -61,6 +61,8 @@ export default function Complaint() {
 
   const [submit1, setSubmit1] = useState(false);
   const [submit2, setSubmit2] = useState(false);
+  const [submit3, setSubmit3] = useState(false);
+
   function handleSubmitForm1(data) {
     setSubmit1(true);
     setComp((prevData) => ({
@@ -104,6 +106,8 @@ export default function Complaint() {
       ...prevData,
       image: base64,
     }));
+    setSubmit3(true);
+
   };
 
   let finalSubmit = () => {
@@ -350,9 +354,15 @@ export default function Complaint() {
                   <div className="buttons">
                     <Button onClick={lastDetail}>Back</Button>
 
-                    <Button colorScheme="red" onClick={finalSubmit}>
-                      Submit
-                    </Button>
+                    {submit3 ? (
+                      <Button colorScheme="red" onClick={finalSubmit}>
+                        Submit
+                      </Button>
+                    ) : (
+                      <Button isDisabled colorScheme="red" onClick={finalSubmit}>
+                        Submit
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
