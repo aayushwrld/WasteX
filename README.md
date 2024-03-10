@@ -8,6 +8,8 @@
 
 ### Video Showcasing our website!
 
+**Our website is Mobile Responsive you may use it with any device!**
+
 https://github.com/aayushharora/WasteX/assets/142983808/a52877b1-2f76-4da0-828e-f2b9d8321063
 
 
