@@ -6,6 +6,11 @@
 
 ### Problem No. - 144
 
+### Video Showcasing our website!
+
+https://github.com/aayushharora/WasteX/assets/142983808/a52877b1-2f76-4da0-828e-f2b9d8321063
+
+
 ![Waste Management](https://t3.ftcdn.net/jpg/05/73/57/76/360_F_573577614_3xNASp9y2eCUSXstGdXf9sKlW3ZYVyUr.jpg)
 
 This project addresses the critical issue of improper waste disposal within residential neighborhoods, leading to environmental pollution and deteriorating community hygiene. The aim is to develop innovative solutions to tackle this challenge by focusing on various key areas:
