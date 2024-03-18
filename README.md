@@ -97,5 +97,6 @@ This website is completely mobile friendly..! Checkout the screenshots below.
 ![image](https://github.com/aayushharora/WasteX/assets/112085869/ee06178c-9347-47ac-b996-4c234d34950d)
 
 
+
 Project by - [Rikhil](https://github.com/rikhil7), [Aayush](https://github.com/aayushwrld), [Dwij](https://github.com/dwij13), [Pranshu](https://github.com/pranshupandey19)
 
